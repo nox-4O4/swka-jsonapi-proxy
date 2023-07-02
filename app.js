@@ -43,7 +43,12 @@ express()
                                 veg: meal.classifiers.includes("VEG"),
                                 mensa_vit: meal.classifiers.includes("MV"),
                                 info: "",
-                                price_1: meal.price ? parseFloat(meal.price.replace(",", ".")) : 0.0,
+                                price_1: meal.price
+                                    ? parseFloat(meal.price
+                                        .replace(/^[^\d]+/, "") // remove leading non-digits
+                                        .replace(",", "."))
+                                    || 0.0 // convert NaNs to 0.0
+                                    : 0.0,
                                 price_2: 0.0,
                                 price_3: 0.0,
                                 price_4: 0.0,
