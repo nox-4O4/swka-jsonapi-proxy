@@ -20,7 +20,7 @@ New projects are strongly encouraged to use [ka-mensa-fetch](https://github.com/
     ```
 
 The application defaults to listening on port 8080.
-You can set a different port in `config.js` or use a local configuration override file (`config.local.ts`).
+You can set a different port in `config.js` or use a local configuration override file (`config.local.js`).
 
 ## Known limitations
 
