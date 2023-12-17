@@ -1,0 +1,17 @@
+name: Build and Deploy
+on:
+  push:
+    branches: 
+      - 'master'
+      - 'dev'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    name: Build snapshot version
+    uses: wi-hska/GitHub-Workflows/.github/workflows/build-container.yml@dev
+    with:
+      image_name: ghcr.io/wi-hska/server-canteen-json-proxy
+      build_args: GITHUB_REF_NAME=${{ github.ref_name }}
