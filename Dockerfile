@@ -30,7 +30,7 @@ USER node
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8088
+EXPOSE 9061
 
 # Run the application.
 CMD npm install | node app.js

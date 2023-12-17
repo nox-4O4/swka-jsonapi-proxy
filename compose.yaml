@@ -16,7 +16,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 8088:8088
+      - 9061:9061
     networks:
       - mensa_api_network
 networks:
