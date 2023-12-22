@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  mensa_json_api:
+    container_name: swka_jsonapi_proxy 
+    build:
+      context: .
+    ports:
+      - "9061:9061"
