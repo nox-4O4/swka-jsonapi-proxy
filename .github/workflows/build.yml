@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
 jobs:
 
   build:
-    name: Build snapshot version
+    name: Build
     uses: wi-hska/GitHub-Workflows/.github/workflows/build-container.yml@master
     with:
       image_name: ghcr.io/wi-hska/swka-jsonapi-proxy
